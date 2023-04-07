@@ -69,7 +69,7 @@ config = {
             'gen_disc_coe': [1.0],
 
             'input_definition_file': ['input_definitions/ntp_normal_input_definition.json'],
-            'ntp_server_ip': ['<FILL IN IP ADDRESS>'],
+            'ntp_server_ip': ['127.0.0.1'],
         },
         {
             'method': ['raregan'],
@@ -90,7 +90,7 @@ config = {
             'gen_disc_coe': [1.0],
 
             'input_definition_file': ['input_definitions/ntp_normal_input_definition.json'],
-            'ntp_server_ip': ['<FILL IN IP ADDRESS>'],
+            'ntp_server_ip': ['127.0.0.1'],
         },
         {
             'method': ['raregan'],
