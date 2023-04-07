@@ -1,0 +1,131 @@
+[
+    {
+        "args": {
+            "name": "zeros",
+            "value": 0
+        },
+        "class": "FixedField"
+    },
+    {
+        "args": {
+            "choices" : [
+                2,
+                3,
+                4
+            ],
+            "length": null,
+            "name": "version"
+        },
+        "class": "ChoiceField"
+    },
+    {
+        "args": {
+            "name": "mode",
+            "value": 6
+        },
+        "class": "FixedField"
+    },
+    {
+        "args": {
+            "choices" : [
+                0,
+                1
+            ],
+            "length": null,
+            "name": "response"
+        },
+        "class": "ChoiceField"
+    },
+    {
+        "args": {
+            "choices" : [
+                0,
+                1
+            ],
+            "length": null,
+            "name": "err"
+        },
+        "class": "ChoiceField"
+    },
+    {
+        "args": {
+            "choices" : [
+                0,
+                1
+            ],
+            "length": 7,
+            "name": "more"
+        },
+        "class": "ChoiceField"
+    },
+    {
+        "args": {
+            "choices" : [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                31
+            ],
+            "length": null,
+            "name": "op_code"
+        },
+        "class": "ChoiceField"
+    },
+    {
+        "args": {
+            "decimal": true,
+            "name": "sequence",
+            "num_bits": 16
+        },
+        "class": "BitField"
+    },
+    {
+        "args": {
+            "decimal": true,
+            "name": "status",
+            "num_bits": 16
+        },
+        "class": "BitField"
+    },
+    {
+        "args": {
+            "decimal": true,
+            "name": "association_id",
+            "num_bits": 16
+        },
+        "class": "BitField"
+    },
+    {
+        "args": {
+            "decimal": true,
+            "name": "offset",
+            "num_bits": 16
+        },
+        "class": "BitField"
+    },
+    {
+        "args": {
+            "decimal": true,
+            "name": "count",
+            "num_bits": 16
+        },
+        "class": "BitField"
+    },
+    {
+        "args": {
+            "name": "data",
+            "value": "dummy"
+        },
+        "class": "FixedField"
+    }
+]
