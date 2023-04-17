@@ -20,10 +20,10 @@ def _query_worker(field_dict, timeouts, server_ip, delay_between):
     """
     if field_dict["mode"] == 6:
         # in control mode 6
-        payload = NTPPrivate()
+        payload = NTPControl()
     elif field_dict["mode"] == 7:
         # in private mode 7
-        payload = NTPControl()
+        payload = NTPPrivate()
     else:
         # in normal mode
         payload = NTPHeader()
@@ -35,14 +35,15 @@ def _query_worker(field_dict, timeouts, server_ip, delay_between):
 
     for timeout in timeouts:
         response, unans = sr(request, multi=True, timeout=timeout, verbose=0)
-        if response is not None:
+        if response is not None and len(response) > 0:
             time.sleep(delay_between)
             response_len = sum([len(x[1]) for x in response])
+            print("AF :", float(response_len) / float(len(request)))
             return float(response_len) / float(len(request))
 
         print("No response for {} seconds: {}".format(timeout, field_dict))
         sys.stdout.flush()
-        time.sleep(timeout)
+        # time.sleep(timeout)
 
     print("No response: {}".format(field_dict))
     sys.stdout.flush()
@@ -51,11 +52,14 @@ def _query_worker(field_dict, timeouts, server_ip, delay_between):
 
 class NTPBlackbox(Blackbox):
     def __init__(self, server_ip,
-                 timeouts=[0.01, 0.05, 1.0, 2.0, 4.0, 8.0],
+                 timeouts=None,
                  num_process=1,
                  delay_between=0.02):
         self._server_ip = server_ip
-        self._timeouts = timeouts
+        if timeouts is None:
+            self._timeouts = [0.05, 1.0, 2.0]
+        else:
+            self._timeouts = timeouts
         self._num_process = num_process
         self._delay_between = delay_between
 
@@ -67,7 +71,6 @@ class NTPBlackbox(Blackbox):
         amplifications = []
         for amplification in tqdm(self._pool.imap(
                 partial(_query_worker,
-                        msg_type=self._msg_type,
                         timeouts=self._timeouts,
                         server_ip=self._server_ip,
                         delay_between=self._delay_between),

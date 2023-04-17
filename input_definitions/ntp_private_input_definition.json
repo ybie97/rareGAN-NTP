@@ -144,12 +144,5 @@
             "value": 0
         },
         "class": "FixedField"
-    },
-    {
-        "args": {
-            "name": "data",
-            "value": "dummy"
-        },
-        "class": "FixedField"
     }
 ]
