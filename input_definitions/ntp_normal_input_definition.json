@@ -75,7 +75,7 @@
         "args": {
             "decimal": true,
             "name": "ref",
-            "num_bits": 64
+            "num_bits": 32
         },
         "class": "BitField"
     },
@@ -83,7 +83,7 @@
         "args": {
             "decimal": true,
             "name": "ori",
-            "num_bits": 64
+            "num_bits": 32
         },
         "class": "BitField"
     },
@@ -91,7 +91,7 @@
         "args": {
             "decimal": true,
             "name": "recv",
-            "num_bits": 64
+            "num_bits": 32
         },
         "class": "BitField"
     },
@@ -99,7 +99,7 @@
         "args": {
             "decimal": true,
             "name": "sent",
-            "num_bits": 64
+            "num_bits": 32
         },
         "class": "BitField"
     }

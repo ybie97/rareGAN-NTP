@@ -1,1 +1,0 @@
-Download `cifar-10-python.tar.gz` from [https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz) (or from other sources) and put it here.

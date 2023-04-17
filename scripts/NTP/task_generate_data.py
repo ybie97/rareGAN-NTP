@@ -14,7 +14,7 @@ class Task(GPUTask):
         from lib.data.dataset import Dataset
         from lib.data.input_definition import InputDefinition
 
-        from blackboxes.blackbox_utils import create_blackbox_from_config, close_blackbox_from_config
+        from blackboxes.blackbox_utils import create_blackbox_from_config
 
         random.seed(self._config['run'])
         np.random.seed(random.randint(0, 1000000))
@@ -22,7 +22,7 @@ class Task(GPUTask):
         input_definition = InputDefinition(
             self._config['input_definition_file'])
         blackbox, auxiliary = create_blackbox_from_config(
-            self._config, input_definition)
+            self._config)
 
         if 'dataset_folder' in self._config:
             dataset = Dataset(self._config['dataset_folder'])
@@ -101,5 +101,3 @@ class Task(GPUTask):
 
             folder = os.path.join(self._work_dir, "generated_data")
             generated_dataset.dump_to_folder(folder)
-
-        close_blackbox_from_config(self._config, blackbox, auxiliary)
