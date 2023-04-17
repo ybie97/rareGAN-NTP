@@ -71,92 +71,28 @@ config = {
             'gen_disc_coe': [1.0],
 
             'input_definition_file': ['input_definitions/ntp_private_input_definition.json'],
-            'ntp_server_ip': ['192.168.50.200'],
-        }
+            'ntp_server_ip': ['NTP_SERVER_IP'],
+        },
+        {
+            'method': ['raregan'],
+            'blackbox': ['ntp'],
+            'bgt': [20000],
+            'run': [0],
+
+            'ini_rnd_bgt': [10000],
+            'bgt_per_step': [10000],
+            'oversampling_ratio': [10],
+
+            'tgt_thld': [10.0],
+            'high_frc_mul': [3.0],
+
+            'bal_disc_weights': [True],
+            'num_iters_per_step': [100000],
+            'disc_disc_coe': [1.0],
+            'gen_disc_coe': [1.0],
+
+            'input_definition_file': ['input_definitions/ntp_private_input_definition.json'],
+            'ntp_server_ip': ['NTP_SERVER_IP'],
+        },
     ]
 }
-
-# {
-#             'method': ['raregan'],
-#             'blackbox': ['ntp'],
-#             'bgt': [200000],
-#             'run': [0, 1, 2, 3, 4],
-#
-#             'ini_rnd_bgt': [100000],
-#             'bgt_per_step': [100000],
-#             'oversampling_ratio': [10],
-#
-#             'tgt_thld': [5.0, 10.0, 15.0, 20.0],
-#             'high_frc_mul': [3.0],
-#
-#             'bal_disc_weights': [True],
-#             'num_iters_per_step': [100000],
-#             'disc_disc_coe': [1.0],
-#             'gen_disc_coe': [1.0],
-#
-#             'input_definition_file': [''],
-#             'ntp_server_ip': ['<FILL IN IP ADDRESS>'],
-#         },
-        # {
-        #     'method': ['raregan'],
-        #     'blackbox': ['ntp'],
-        #     'bgt': [100000],
-        #     'run': [0, 1, 2, 3, 4],
-        #
-        #     'ini_rnd_bgt': [50000],
-        #     'bgt_per_step': [50000],
-        #     'oversampling_ratio': [10],
-        #
-        #     'tgt_thld': [10.0],
-        #     'high_frc_mul': [3.0],
-        #
-        #     'bal_disc_weights': [True],
-        #     'num_iters_per_step': [100000],
-        #     'disc_disc_coe': [1.0],
-        #     'gen_disc_coe': [1.0],
-        #
-        #     'input_definition_file': ['input_definitions/ntp_normal_input_definition.json'],
-        #     'ntp_server_ip': ['<FILL IN IP ADDRESS>'],
-        # },
-        # {
-        #     'method': ['raregan'],
-        #     'blackbox': ['ntp'],
-        #     'bgt': [50000],
-        #     'run': [0, 1, 2, 3, 4],
-        #
-        #     'ini_rnd_bgt': [25000],
-        #     'bgt_per_step': [25000],
-        #     'oversampling_ratio': [10],
-        #
-        #     'tgt_thld': [10.0],
-        #     'high_frc_mul': [3.0],
-        #
-        #     'bal_disc_weights': [True],
-        #     'num_iters_per_step': [100000],
-        #     'disc_disc_coe': [1.0],
-        #     'gen_disc_coe': [1.0],
-        #
-        #     'input_definition_file': ['input_definitions/ntp_normal_input_definition.json'],
-        #     'ntp_server_ip': ['<FILL IN IP ADDRESS>'],
-        # },
-        # {
-        #     'method': ['raregan'],
-        #     'blackbox': ['ntp'],
-        #     'bgt': [20000],
-        #     'run': [0, 1, 2, 3, 4],
-        #
-        #     'ini_rnd_bgt': [10000],
-        #     'bgt_per_step': [10000],
-        #     'oversampling_ratio': [10],
-        #
-        #     'tgt_thld': [10.0],
-        #     'high_frc_mul': [3.0],
-        #
-        #     'bal_disc_weights': [True],
-        #     'num_iters_per_step': [100000],
-        #     'disc_disc_coe': [1.0],
-        #     'gen_disc_coe': [1.0],
-        #
-        #     'input_definition_file': ['input_definitions/ntp_normal_input_definition.json'],
-        #     'ntp_server_ip': ['<FILL IN IP ADDRESS>'],
-        # }
