@@ -68,9 +68,11 @@ class InputDefinition(object):
             field_dict = {}
             dim = 0
             for field in self._fields:
+                # print(field.name, numpy_inputs[i, dim: dim + field.numpy_dim])
                 field_dict[field.name] = field.numpy_to_field(
                     numpy_inputs[i, dim: dim + field.numpy_dim])
                 dim += field.numpy_dim
+                # print(field_dict)
             field_dict_inputs.append(field_dict)
         return field_dict_inputs
 
