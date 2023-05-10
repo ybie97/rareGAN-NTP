@@ -62,7 +62,7 @@ config = {
             'bgt_per_step': [100000],
             'oversampling_ratio': [10],
 
-            'tgt_thld': [5.0, 10.0, 15.0, 20.0],
+            'tgt_thld': [5.0, 10.0, 15.0, 20.0, 30.0],
             'high_frc_mul': [3.0],
 
             'bal_disc_weights': [True],
@@ -83,7 +83,7 @@ config = {
             'bgt_per_step': [10000],
             'oversampling_ratio': [10],
 
-            'tgt_thld': [10.0],
+            'tgt_thld': [5.0, 10.0, 15.0, 20.0, 30.0],
             'high_frc_mul': [3.0],
 
             'bal_disc_weights': [True],
